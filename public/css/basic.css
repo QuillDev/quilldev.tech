@@ -27,12 +27,12 @@ logo {
 /* Dividers */
 .divider {
     height: .1em;
-    background: white;
+    background: #2f3136;;
 }
 
 .divider-thick {
     height: .2em;
-    background: white;
+    background: #2f3136;
 }
 
 code {
@@ -69,4 +69,16 @@ code {
 
 .btn-dark{
     background-color: #1b1c1f;
+}
+
+.btn-text-huge{
+    font-size: 2em;
+}
+
+nsfw {
+    color: #ff6a59;
+}
+
+opt {
+    color: #68a4e8;
 }

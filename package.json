@@ -1,0 +1,28 @@
+{
+  "name": "tsubasasite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuillDev/Tsubasa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuillDev/Tsubasa/issues"
+  },
+  "homepage": "https://github.com/QuillDev/Tsubasa#readme",
+  "dependencies": {
+    "@octokit/auth-app": "^2.7.0",
+    "express": "^4.17.1",
+    "got": "^11.8.0",
+    "helmet": "^4.1.1",
+    "https": "^1.0.0",
+    "octonode": "^0.9.5",
+    "path": "^0.12.7"
+  }
+}
