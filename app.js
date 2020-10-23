@@ -4,12 +4,14 @@ const app = express();
 const path = require("path");
 const helmet = require("helmet");
 const morgan = require("morgan");
+const chalk = require("chalk")
 require('dotenv').config(); //setup dotenv
 
 //setup express middleware
 app.use(helmet());
-app.use(morgan('[:date[iso]] [:method]: :url [STATUS]: :status => :response-time ms'));
 
+const morganString = chalk`{cyan [:date[iso]] [:method]: {bold :url} [STATUS]: :status => {bold :response-time ms}}`;
+app.use(morgan(morganString));
 
 //use the public folder in express
 //app.use(helmet());
