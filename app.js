@@ -8,7 +8,7 @@ require('dotenv').config(); //setup dotenv
 
 //setup express middleware
 app.use(helmet());
-app.use(morgan('tiny'));
+app.use(morgan('[:date[iso]] [:method]: :url [STATUS]: :status => :response-time ms'));
 
 
 //use the public folder in express
