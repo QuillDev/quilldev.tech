@@ -18,10 +18,12 @@
   "homepage": "https://github.com/QuillDev/Tsubasa#readme",
   "dependencies": {
     "@octokit/auth-app": "^2.7.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "got": "^11.8.0",
     "helmet": "^4.1.1",
     "https": "^1.0.0",
+    "morgan": "^1.10.0",
     "octonode": "^0.9.5",
     "path": "^0.12.7"
   }

@@ -1,12 +1,15 @@
 //setup express app
 const express = require("express");
 const app = express();
-
-//path for formatting paths
 const path = require("path");
-
-//get helmet logger
 const helmet = require("helmet");
+const morgan = require("morgan");
+require('dotenv').config(); //setup dotenv
+
+//setup express middleware
+app.use(helmet());
+app.use(morgan('tiny'));
+
 
 //use the public folder in express
 //app.use(helmet());
@@ -41,6 +44,7 @@ app.get("*", (req, res) => {
 })
 
 //Listen on port 80 for any traffic
-app.listen(80, () => {
-    console.log(`App Listening on port 80`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`App Listening on port ${PORT}`);
 });
