@@ -38,3 +38,5 @@ function getRandom() {
 function startWriter() {
     typeWriter(getRandom());
 }
+
+window.onload = startWriter;
