@@ -82,3 +82,8 @@ nsfw {
 opt {
     color: #68a4e8;
 }
+
+.tsubasa-footer {
+    font-size: 1.2em;
+    text-align: center;
+}
