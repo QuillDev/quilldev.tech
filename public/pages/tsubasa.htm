@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" href="/public/css/basic.css" type="text/css">
     <script src="./public/scripts/typewriter.js"></script>
-
 </header>
 
 <body>
@@ -73,7 +72,10 @@
         <p> Skip to a module by clicking it here.</p>
         <a href="#generic"><button type="button" class="btn btn-dark">Generic</button></a>
         <a href="#music"><button type="button" class="btn btn-dark">Music</button></a>
-        <a href="#hentai"><button type="button" class="btn btn-dark">Anime</button></a>
+        <a href="#anime"><button type="button" class="btn btn-dark">Anime</button></a>
+        <a href="#hentai"><button type="button" class="btn btn-dark">
+                <nsfw>Hentai</nsfw>
+            </button></a>
         <br><br>
 
         <!-- Key section giving information about command table-->
@@ -106,7 +108,9 @@
                     </tr>
                     <tr>
                         <td>pfp</td>
-                        <td>None</td>
+                        <td>
+                            <opt>[@user]</opt>
+                        </td>
                         <td>Prints the profile picture of the tagged user, or the author if no one is specified.</td>
                     </tr>
                     <tr>
@@ -144,7 +148,9 @@
                 <tbody>
                     <tr>
                         <td>play</td>
-                        <td><opt>[@user]</opt></td>
+                        <td>
+                            [query]
+                        </td>
                         <td>Searches YouTube for the query entered and plays it.</td>
                     </tr>
                     <tr>
@@ -153,7 +159,7 @@
                         <td>Shows songs in the queue</td>
                     </tr>
                     <tr>
-                        <td>Skip</td>
+                        <td>skip</td>
                         <td>None</td>
                         <td>Skips the song currently playing.</td>
                     </tr>
@@ -174,7 +180,7 @@
 
             <!-- Anime Module -->
             <div class="module">
-                <header id="hentai"> Anime </header>
+                <header id="anime"> Anime </header>
                 <table class="table table-dark table-bordered">
                     <thead>
                         <tr class="table-head">
@@ -186,14 +192,52 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><nsfw>hentai</nsfw></td>
+                            <td>animesearch</td>
+                            <td>[query]</td>
+                            <td>Searches for anime information matching the query</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Hentai Module -->
+            <div class="module">
+                <header id="hentai">
+                    <nsfw> Hentai</nsfw>
+                </header>
+                <table class="table table-dark table-bordered">
+                    <thead>
+                        <tr class="table-head">
+
+                            <th scope="col">Command</th>
+                            <th scope="col">Arguments</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <nsfw>hentai</nsfw>
+                            </td>
                             <td>[query]</td>
                             <td>Searches danbooru for hentai matching the given query.</td>
                         </tr>
                         <tr>
-                            <td>animesearch</td>
-                            <td>[query]</td>
-                            <td>Searches for anime information matching the query</td>
+                            <td>
+                                <nsfw>doujin</nsfw>
+                            </td>
+                            <td>
+                                <opt>[query]</opt>
+                            </td>
+                            <td>Gets a random doujin from the given query off nhentai</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <nsfw>doujintop</nsfw>
+                            </td>
+                            <td>
+                                <opt>[query]</opt>
+                            </td>
+                            <td>Gets top 5 doujins for the query given</td>
                         </tr>
                     </tbody>
                 </table>

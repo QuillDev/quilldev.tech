@@ -4,11 +4,14 @@ const app = express();
 const path = require("path");
 const helmet = require("helmet");
 const morgan = require("morgan");
-const chalk = require("chalk")
+const chalk = require("chalk");
+const favicon = require('serve-favicon')
 require('dotenv').config(); //setup dotenv
 
 //setup express middleware
 app.use(helmet());
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+//setup favicon
 
 const morganString = chalk`{cyan [:date[iso]] [:method]: {bold :url} [STATUS]: :status => {bold :response-time ms}}`;
 app.use(morgan(morganString));
@@ -43,7 +46,7 @@ app.get("/tsubasa/helper/source", (req, res) => {
 //if we didnt get locked 404 that bih
 app.get("*", (req, res) => {
     res.sendFile(path.join(pages, "404.htm"));
-})
+});
 
 //Listen on port 80 for any traffic
 const PORT = process.env.PORT || 3000;
