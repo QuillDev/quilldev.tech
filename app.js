@@ -7,6 +7,8 @@ const morgan = require("morgan");
 const chalk = require("chalk");
 const favicon = require('serve-favicon');
 const routes = require("./routes");
+const changelog = require("./makelog");
+
 require('dotenv').config(); //setup dotenv
 
 //string setup for morgan logging
@@ -17,5 +19,8 @@ app.use(helmet());
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(morgan(morganString));
 app.use('/public', express.static(__dirname + "/public"));
+
+//update the changelog page
+changelog.updateChangelog();
 
 routes.setup(app);

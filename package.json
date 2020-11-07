@@ -18,6 +18,7 @@
   "homepage": "https://github.com/QuillDev/Tsubasa#readme",
   "dependencies": {
     "@octokit/auth-app": "^2.7.0",
+    "bluebird": "^3.7.2",
     "chalk": "^4.1.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

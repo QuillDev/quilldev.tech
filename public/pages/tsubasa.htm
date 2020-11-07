@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/css/basic.css" type="text/css">
-    <script src="./public/scripts/typewriter.js"></script>
+    <script src="/public/scripts/typewriter.js"></script>
 </header>
 
 <body>
@@ -43,7 +43,7 @@
         <logo>『Tsubasa』</logo>
         <p>Tsubasa is a general purpose discord.js bot by QuillDev ❤️</p>
 
-        <img src="./public/resources/command-example.PNG">
+        <img src="/public/resources/command-example.png">
         <br>
         <div class="code-bg">
             <code id="typewriter">t></code>
@@ -167,6 +167,11 @@
                         <td>Skips the song currently playing.</td>
                     </tr>
                     <tr>
+                        <td>stop</td>
+                        <td>None</td>
+                        <td>Stops the player from playing any further and disconnects.</td>
+                    </tr>
+                    <tr>
                         <td>radio</td>
                         <td>None</td>
                         <td>Toggles radio mode which auto plays songs.</td>
@@ -175,6 +180,21 @@
                         <td>lyrics</td>
                         <td>None</td>
                         <td>Gets lyrics for the current song if supported.</td>
+                    </tr>
+                    <tr>
+                        <td>pause</td>
+                        <td>None</td>
+                        <td>Toggles whether the player is paused.</td>
+                    </tr>
+                    <tr>
+                        <td>playing</td>
+                        <td>None</td>
+                        <td>Gets the track that's currently playing.</td>
+                    </tr>
+                    <tr>
+                        <td>seek</td>
+                        <td>[time/seconds]</td>
+                        <td>Seeks to the given point in the song if possible</td>
                     </tr>
                 </tbody>
             </table>
@@ -221,7 +241,7 @@
                             <td>
                                 <nsfw>hentai</nsfw>
                             </td>
-                            <td>[query]</td>
+                            <td><opt>[query]</opt></td>
                             <td>Searches danbooru for hentai matching the given query.</td>
                         </tr>
                         <tr>
@@ -241,6 +261,15 @@
                                 <opt>[query]</opt>
                             </td>
                             <td>Gets top 5 doujins for the query given</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <nsfw>sauce</nsfw>
+                            </td>
+                            <td>
+                                [image url/ attachment]
+                            </td>
+                            <td>Tries to get the source for the given image. (Pixiv/Name/NHentai)</td>
                         </tr>
                     </tbody>
                 </table>

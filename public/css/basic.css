@@ -87,3 +87,14 @@ opt {
     font-size: 1.2em;
     text-align: center;
 }
+
+version {
+    font-size: 1.5em;
+    display: inline-block;
+    margin: 0;
+}
+
+.latest-button {
+    color: white;
+    background-color: #4a97f0;
+}

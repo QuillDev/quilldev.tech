@@ -24,6 +24,11 @@ function setupApp(app) {
         res.redirect(301, 'https://github.com/QuillDev/TsubasaJS');
     });
 
+    //Add the changelog endpoint
+    app.get("/tsubasa/changes", (req, res) => {
+        res.sendFile(path.join(pages, "changelog.htm"));
+    });
+
     //if we didnt get locked 404 that bih
     app.get("*", (req, res) => {
         res.sendFile(path.join(pages, "404.htm"));
